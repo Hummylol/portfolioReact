@@ -41,8 +41,8 @@ const Arrow = ({tryDrag}) => {
       <svg
         id="eWXecq5ulbj1"
         viewBox="0 0 300 300"
-        shape-rendering="geometricPrecision"
-        text-rendering="geometricPrecision"
+        shapeRendering="geometricPrecision"
+        textRendering="geometricPrecision"
         project-id="cf0cc84d963f4d04925883d14d86ba22"
         export-id="52f1fce27697447ab3ebe2f54a3c985b"
         cached="false"
@@ -54,7 +54,7 @@ const Arrow = ({tryDrag}) => {
           transform="translate(.000002 0.000004)"
           fill="none"
           stroke="#B9FFBE"
-          stroke-width="6"
+          strokeWidth="6"
         />
         <line
           ref={pathRef2}
@@ -65,7 +65,7 @@ const Arrow = ({tryDrag}) => {
           transform="translate(148.736508 145.045358)"
           fill="none"
           stroke="#B9FFBE"
-          stroke-width="4"
+          strokeWidth="4"
         />
         <line
           ref={pathRef3}
@@ -76,14 +76,14 @@ const Arrow = ({tryDrag}) => {
           transform="matrix(.998925-.046347 0.046347 0.998925 158.225606 140.045358)"
           fill="none"
           stroke="#B9FFBE"
-          stroke-width="4"
+          strokeWidth="4"
         />
         <ellipse
           rx="1.685558"
           ry="1.550713"
           transform="matrix(1.32 0 0 1.434784 157.350667 149.751715)"
           fill="#B9FFBE"
-          stroke-width="0"
+          strokeWidth="0"
         />
       </svg>
     </div>

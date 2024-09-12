@@ -38,7 +38,7 @@ const Skills = ({ moveLeft: x, moveRight: x1 }) => {
             data-swapy-item={skill.swapyItem}
             onClick={() => handleClick(skill.additionalData)}
           >
-            <h2 className=' text-2xl h-[100%] w-[100%] flex justify-center items-center'>{skill.h2Content}<MyDrawer addData={skill.additionalData} /></h2>
+            <h2 className=' text-2xl h-[100%] w-[100%] flex justify-center items-center'>{skill.h2Content}<MyDrawer addData={skill.additionalData} projects={skill.sampleProjects} dataPercentage={skill.percentage} /></h2>
           </motion.div>
         </div>
       ))}
