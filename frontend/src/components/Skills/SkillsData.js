@@ -23,7 +23,7 @@ export let skillsData = [
     "swapyItem": "b",
     "h2Content": "MERN Stack",
     "additionalData": "Knowledgeable in MongoDB, Express, React, and Node.js. Familiar with building full-stack web applications. Experienced in using Mongoose for database modeling and Passport for authentication.",
-    "percentage": 80,
+    "percentage": 90,
     "sampleProjects": [
       {
         "projectName": "Blog Application",

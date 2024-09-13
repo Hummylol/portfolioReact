@@ -26,7 +26,7 @@ const Skills = ({ moveLeft: x, moveRight: x1 }) => {
   }, []);
 
   return (
-    <div className="SkillsContainer text-white h-[100%] p-4 grid grid-cols-4 grid-rows-4 ">
+    <div data-vaul-drawer-wrapper className="SkillsContainer text-white h-[100%] p-4 grid grid-cols-4 grid-rows-4 ">
       {skillsData.map((skill, index) => (
         <div
           data-swapy-slot={skill.swapySlot}

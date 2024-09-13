@@ -131,5 +131,6 @@ html,body{
 .SkillsContainer > div:nth-child(8) {
   grid-column: span 2;
   grid-row: span 1;
+  
 }
 

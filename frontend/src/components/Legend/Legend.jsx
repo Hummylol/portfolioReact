@@ -12,7 +12,7 @@ const Legend = () => {
     return (
         <div
             onClick={() => handleClick('nav')}
-            className="h-[3vh] w-[3vh] cursor-pointer fixed bottom-[1.5vw] right-[1.5vw] z-[10] flex items-center justify-center rounded-full bg-black transition-transform duration-300 ease-in-out transform hover:scale-[3] hover:bg-white"
+            className="h-[3vh] w-[3vh] cursor-pointer fixed bottom-[1.5vw] right-[1.5vw] z-[100] flex items-center justify-center rounded-full bg-black transition-transform duration-300 ease-in-out transform hover:scale-[3] hover:bg-white"
             style={{ transformOrigin: 'center center' }}
         >
             <div className="flex invert hover:invert-0 items-center justify-center transition-transform duration-300 ease-in-out hover:rotate-0 rotate-[-270deg]">

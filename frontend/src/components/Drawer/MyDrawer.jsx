@@ -1,12 +1,15 @@
+import { useState } from "react";
 import { Drawer } from "vaul";
 
 export default function MyDrawer({ addData, dataPercentage, projects }) {
-  const Progress = ({ value, className }) => {
-    return (
-      <div className={`bg-[#39393B] h-2 rounded ${className}`}>
-        <div className="bg-[#FAFAFA] h-full rounded" style={{ width: `${value}%` }}></div>
-      </div>
-    );
+  const [tooltip, setTooltip] = useState({ visible: false });
+
+  const handleMouseOver = () => {
+    setTooltip({ visible: true });
+  };
+
+  const handleMouseOut = () => {
+    setTooltip({ visible: false });
   };
 
   return (
@@ -21,26 +24,46 @@ export default function MyDrawer({ addData, dataPercentage, projects }) {
           <div className="addData text-3xl text-white mb-4">
             {addData}
           </div>
-          <div className="progressDiv mb-6">
-            <Progress value={dataPercentage} className="w-[30%]" />
-          </div>
-          <div className="projects-section space-y-4">
-            <h3 className="text-2xl mb-2">Sample Projects</h3>
-            <ul className="space-y-4">
-              {projects?.map((project, index) => (
-                <li key={index} className="p-4 bg-[#1e1e1e] rounded-lg">
-                  <h4 className="text-xl font-semibold mb-2">{project.projectName}</h4>
-                  <p className="text-lg mb-2">{project.projectDescription}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologiesUsed.map((tech, idx) => (
-                      <span key={idx} className="bg-[#2e2e2e] px-3 py-1 text-sm rounded-full">
-                        {tech}
-                      </span>
-                    ))}
+          <div className="flex">
+            <div className="projects-section w-[100%] space-y-4">
+              <h3 className="text-2xl mb-2">Sample Projects</h3>
+              <ul className="space-y-4">
+                {projects?.map((project, index) => (
+                  <li key={index} className="p-4 bg-[#1e1e1e] rounded-lg">
+                    <h4 className="text-xl font-semibold mb-2">{project.projectName}</h4>
+                    <p className="text-lg mb-2">{project.projectDescription}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologiesUsed.map((tech, idx) => (
+                        <span key={idx} className="bg-[#2e2e2e] px-3 py-1 text-sm rounded-full">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="progressDiv relative flex justify-center items-center w-[15%] text-black">
+              <div
+                className="outer relative bg-[#39393B] w-[40%] h-[10rem] rounded"
+                style={{ position: "relative" }}
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+              >
+                <div
+                  className={`percent absolute bg-[#FAFAFA] w-[100%] bottom-0 rounded-b`}
+                  style={{ height: `${dataPercentage}%` }}
+                >
+                  <div
+                    className={`absolute transform translate-x-[170%] transition-all ease-in duration-[150] bg-[#2e2e2e] text-white px-2 py-1 rounded text-sm whitespace-nowrap pointer-events-none ${
+                      tooltip.visible ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    {`${dataPercentage}%`}
                   </div>
-                </li>
-              ))}
-            </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </Drawer.Content>
       </Drawer.Portal>
