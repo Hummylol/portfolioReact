@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  font-family: poppins;
+  background-color:black ;
+  color: white;  
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 0px;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active{
+  cursor:grabbing;
+}
+
+.slider{
+  perspective: 175px;
+  perspective-origin: "50% 100%";
+  overflow: hidden;
+}
+
+.card{
+  transform: translate3d(-50%,-50%,0px);
+  background: #000;
+  border-right: 1px solid #303030;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.card::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.card-info{
+  padding: 0.5em 0.75em;
+}
+
+.card-item{
+  flex: 1;
+}
+.card-item p{
+  font-size: 10px;
+  color: white;
+}
+
+.video-player > div{
+  position: relative;
+  transform: scale(1.5);
+}
+
+@media(max-width:900px){
+  .video-player > div{
+    transform: scale(3);
+  }
+}
+
+.SkillsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.SkillsContainer > div:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.SkillsContainer > div:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.SkillsContainer > div:nth-child(3) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.SkillsContainer > div:nth-child(4) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.SkillsContainer > div:nth-child(5) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.SkillsContainer > div:nth-child(6) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.SkillsContainer > div:nth-child(7) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.SkillsContainer > div:nth-child(8) {
+  grid-column: span 2;
+  grid-row: span 1;
+  
+}
+

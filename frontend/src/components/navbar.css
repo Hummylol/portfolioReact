@@ -1,0 +1,16 @@
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-20deg); }
+    20% { transform: rotate(20deg); }
+    30% { transform: rotate(-20deg); }
+    40% { transform: rotate(20deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .wave-hand {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+    transform-origin: 70% 70%; /* Adjust the origin to make the wave look natural */
+  }
+  
